@@ -18,7 +18,8 @@
   List<String> Grains = new ArrayList<>(Arrays.asList(
      "Spanikopita",
       "Spaghetti",
-      "Potato Skins"
+      "Potato Skins",
+          "Alfredo Bowl"
   ));
   List<String> Dairy = new ArrayList<>(Arrays.asList(
      "Cheese",
