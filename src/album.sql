@@ -1,0 +1,10 @@
+--     CREATE TABLE albums (
+--     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+--     artist VARCHAR(50),
+--     release_date DATE NOT NULL,
+--     sales INT NOT NULL,
+--     genre VARCHAR(10),
+--     PRIMARY KEY (id)
+--
+--
+-- );
