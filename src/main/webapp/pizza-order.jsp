@@ -41,6 +41,11 @@
     <input type="checkbox" name="mushroom" id="mushroom" value="mushroom">
                 </div>
     <br>
+    <h2>Delivery Address</h2>
+    <div class="form-group">
+
+        <input id="address" type="text">
+    </div>
     <input type="submit">
 </form>
 <script>
@@ -52,6 +57,7 @@
         for (var input of entries) {
             console.log('Toppings: ' + input[1]);
         }
+        let a = document.getElementById('address')
     });
     function handleSelectChange(event) {
 
