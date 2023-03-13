@@ -8,10 +8,15 @@ import java.io.IOException;
 @WebServlet(name = "PizzaServlet", urlPatterns = "/pizza-order")
 public class PizzaServlet extends HttpServlet {
     @Override
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException,ServletException {
+        request.getRequestDispatcher("/pizza-order.jsp").forward(request,response);
+    }
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        System.out.println(request.getParameter("crust"));
+        System.out.println(request.getParameter("sauce"));
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-
-        request.getRequestDispatcher("/path/to/pizza-order.jsp").forward(request, response);
+        String[] toppings = request.getParameterValues("form-group");
 
     }
 }
