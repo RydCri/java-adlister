@@ -1,3 +1,4 @@
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -8,7 +9,7 @@ import java.io.IOException;
 public class PizzaServlet extends HttpServlet {
     @Override
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
         request.getRequestDispatcher("/path/to/pizza-order.jsp").forward(request, response);
 
