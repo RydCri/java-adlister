@@ -6,7 +6,7 @@
     <title>Adlister</title>
 </head>
 <body>
-response.getWriter().println("<h1>Hello, World!</h1>");
+<h3>Adlist: </h3>
 <c:forEach var="ad" items="${ads}">
         <h2>${ad.title}</h2>
         <p>${ad.description}</p>
