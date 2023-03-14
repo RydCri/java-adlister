@@ -4,13 +4,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 
 @WebServlet(name = "AdServlet", urlPatterns = "/ads")
 public class AdServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.setAttribute("ads", DaoFactory.getAdsDao().all());
+        ArrayList<Ad> ads = (ArrayList<Ad>) DaoFactory.getAdsDao().all();
+        request.setAttribute("ads", ads);
         request.getRequestDispatcher("/ads/index.jsp").forward(request, response);
     }
 }

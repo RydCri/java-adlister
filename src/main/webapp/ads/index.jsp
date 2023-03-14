@@ -8,7 +8,7 @@
 <body>
 <h3>Adlist: </h3>
 <c:forEach var="ad" items="${ads}">
-        <h2>${ad.title}</h2>
+        <h2 name="ads">${ads}</h2>
         <p>${ad.description}</p>
 </c:forEach>
 </body>
