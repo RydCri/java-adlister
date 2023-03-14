@@ -6,6 +6,13 @@
         <jsp:param name="title" value="Please Log In" />
     </jsp:include>
 </head>
+<style>
+    body {
+        background:linear-gradient(darkblue,darkorchid);
+        color: white;
+        text-shadow: 1px 2px 0 black;
+    }
+</style>
 <body>
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">
