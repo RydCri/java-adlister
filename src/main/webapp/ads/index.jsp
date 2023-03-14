@@ -6,12 +6,10 @@
     <title>Adlister</title>
 </head>
 <body>
-<h1 name="ads">Adlist: ${ads}</h1>
-<c:forEach var="ads" items="${ads}">
-    <div>
-        <p name="ads">${ads}</p>
-    </div>
+response.getWriter().println("<h1>Hello, World!</h1>");
+<c:forEach var="ad" items="${ads}">
+        <h2>${ad.title}</h2>
+        <p>${ad.description}</p>
 </c:forEach>
-
 </body>
 </html>
