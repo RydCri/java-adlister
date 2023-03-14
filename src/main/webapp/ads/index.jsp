@@ -6,11 +6,27 @@
     <title>Adlister</title>
 </head>
 <body>
-<h3>Adlist: </h3>
+<style>
+    body {
+        background:linear-gradient(darkblue,darkorchid);
+        color: white;
+        text-shadow: 1px 2px 0 black;
+    }
+    div {
+        text-indent: 50px;
+    }
+</style>
+<div>
+    <br>
+
+<h1 style="text-align:center;">New Ads ✨</h1>
 
 <c:forEach var="ad" items="${ads}">
-        <h2>${ad.title}</h2>
+
+    <span>User ID: ${ad.userId}</span><h3>${ad.title}</h3>
         <p>${ad.description}</p>
+    <hr>
 </c:forEach>
+</div>
 </body>
 </html>
