@@ -16,4 +16,12 @@ public class AdServlet extends HttpServlet {
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
         request.getRequestDispatcher("/ads/index.jsp").forward(request, response);
     }
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)throws IOException,ServletException{
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+            if (username.equals("admin") && password.equals("password")) {
+                response.sendRedirect("/profile");
+            }
+        }
 }
