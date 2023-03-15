@@ -10,6 +10,7 @@
 
     <div class="container">
         <h1>Viewing your profile.</h1>
+        <a href="/logout">Logout</a>
     </div>
 
 </body>
