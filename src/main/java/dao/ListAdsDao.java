@@ -1,3 +1,7 @@
+package dao;
+
+import controllers.Ad;
+
 import java.util.ArrayList;
 import java.util.List;
 
