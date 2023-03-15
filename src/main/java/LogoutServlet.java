@@ -18,6 +18,7 @@ public class LogoutServlet extends HttpServlet {
 
         if((boolean) session.getAttribute("LoggedIn") == false) {
             System.out.println("User attempted access to logout page: already logged out");
+            response.sendRedirect("/login");
         }
     }
 }
