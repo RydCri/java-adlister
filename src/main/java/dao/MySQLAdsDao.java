@@ -16,13 +16,10 @@ public class MySQLAdsDao implements Ads {
             DriverManager.registerDriver(new Driver());
             Config config = new Config();
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/adlister_db?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true",
-                    "root",
-                    "codeup"
+                    config.getUrl(),
+                    config.getUser(),
+                    config.getPassword()
             );
-//                    config.getUrl(),
-//                    config.getUser(),
-//                    config.getPassword()
 
         } catch (SQLException e) {
             e.printStackTrace();
