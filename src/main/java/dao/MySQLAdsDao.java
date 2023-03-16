@@ -5,17 +5,17 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SQLAdsDao implements Ads {
+public class MySQLAdsDao implements Ads {
 
     private Connection connection;
     private List<Ad> Ads;
 
-    public SQLAdsDao() {
+    public MySQLAdsDao() {
 
         try {
             DriverManager.registerDriver(new Driver());
             Config config = new Config();
-            Connection connection = DriverManager.getConnection(
+            connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost/adlister_db?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true",
                     "root",
                     "codeup"
@@ -31,13 +31,9 @@ public class SQLAdsDao implements Ads {
 
     @Override
     public List<Ad> all() {
-        try {
-            Connection connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/adlister_db?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true",
-                    "root",
-                    "codeup"
-            );
             List<Ad> Ads = new ArrayList<>();
+        try {
+
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM Ads");
 
