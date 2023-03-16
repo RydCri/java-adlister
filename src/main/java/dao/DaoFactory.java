@@ -5,7 +5,7 @@ public class DaoFactory {
 
     public static Ads getAdsDao() {
         if (adsDao == null) {
-            adsDao =  new SQLAdsDao(); //this one
+            adsDao =  new MySQLAdsDao(); //this one
         }
         return adsDao;
     }
