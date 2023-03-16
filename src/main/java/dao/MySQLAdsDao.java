@@ -35,9 +35,10 @@ public class MySQLAdsDao implements Ads {
             ResultSet rs = stmt.executeQuery("SELECT * FROM Ads");
 
             while (rs.next()) {
-                Ad ad = new Ad(rs.getString("title"), rs.getString("description"));
-                Ads.add(ad);
-            }
+                Ad ad = new Ad(rs.getString("title"),
+                            rs.getString("description"));
+                            Ads.add(ad);
+                              }
         } catch (SQLException e) {
             e.printStackTrace();
         }
