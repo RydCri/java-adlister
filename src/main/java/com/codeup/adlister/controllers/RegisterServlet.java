@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "controllers.RegisterServlet", urlPatterns = "/register")
-public class RegisterServlet extends HttpServlet {
+public class RegisterServlet extends HttpServlet
+{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
     }
@@ -21,8 +22,10 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String passwordConfirmation = request.getParameter("confirm_password");
+        System.out.println(username);
+        System.out.println(email);
+        System.out.println(password);
 
-        // validate input
         boolean inputHasErrors = username.isEmpty()
             || email.isEmpty()
             || password.isEmpty()
@@ -32,10 +35,10 @@ public class RegisterServlet extends HttpServlet {
             response.sendRedirect("/register");
             return;
         }
-
         // create and save a new user
         User user = new User(username, email, password);
         DaoFactory.getUsersDao().insert(user);
         response.sendRedirect("/login");
     }
-}
+    }
+
