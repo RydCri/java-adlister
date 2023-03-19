@@ -11,7 +11,5 @@ import java.io.IOException;
 public class LogoutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.getRequestDispatcher("/WEB-INF/logout.jsp").forward(request,response);
-//        request.getSession().removeAttribute("user");
-//        request.getSession().invalidate();
     }
 }
