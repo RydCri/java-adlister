@@ -10,6 +10,7 @@
     </jsp:include>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/style.jsp"/>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
     <h1>You have been logged out</h1>
